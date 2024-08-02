@@ -1,5 +1,6 @@
 <ul class="list-group">
     @for (task of tasks$ | async; track task.id; let i=$index) {
       <li class="list-group-item">{{ i + 1 }} {{ task.content }} {{ task.id }}</li>
+      <div></div>
     }
   </ul>
