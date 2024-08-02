@@ -1,7 +1,8 @@
 <ul class="list-group">
+  <div class="container">
+  <h1 class="title">Daily Tasks</h1>
     @for (task of tasks$ | async; track task.id; let i=$index) {
-      <li class="list-group-item">{{ i + 1 }} {{ task.content }} {{ task.id }}</li>
-      <div></div>
-      <span></span>
+      <li class="list-group-item list">{{ i + 1 }} {{ task.content }} {{ task.id }}</li>
     }
+  </div>
   </ul>
