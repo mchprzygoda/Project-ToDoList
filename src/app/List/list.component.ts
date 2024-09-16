@@ -18,7 +18,7 @@ export interface TasksModel {
 })
 export class ListComponent {
   httpClient = inject(HttpClient);
-  private header = new HttpHeaders().set("Authorization", "Bearer fcbc3bbff279c89febfdeab7e48044d315ad3aa4")
+  private header = new HttpHeaders().set("Authorization", "Bearer 6a166c67887db2a09cb91fdcc92262e3a7384007")
   tasks$: Observable<TasksModel[]> = this.httpClient.get<TasksModel[]>('https://api.todoist.com/rest/v2/tasks', {'headers': this.header});
   
 }
